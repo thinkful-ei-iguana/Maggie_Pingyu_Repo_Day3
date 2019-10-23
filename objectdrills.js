@@ -25,3 +25,12 @@ const obj = {
 for (let prop in obj) {
     console.log(obj[prop]);
 }
+
+
+
+const newerObj = {
+    meals: ['breakfast', 'second breakfast', 'elevensies', 'lunch', 'afternoon tea', 'dinner', 'supper']
+}
+
+let final = newerObj.meals
+console.log(final[3])
