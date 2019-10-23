@@ -19,13 +19,13 @@ const sampleObj = {
     bar: 'bar',
     bizz: 'bizz',
     bang: 'bang',
-  };
-  
-  function keyDeleter(obj) {
+};
+
+function keyDeleter(obj) {
     delete sampleObj.foo
     delete sampleObj.bar
-    return sampleObj 
-  }
+    return sampleObj
+}
 
 
 
@@ -42,62 +42,57 @@ function personMaker() {
     return person;
 }
 
-<<<<<<< HEAD
 function makeStudentsReport(data) {
-    // your code here
+    const finalResults = [];
+    for (let i = 0; i < data.length; i++) {
+        let blah = data[i]
+        finalResults.push(`${blah.name}: ${blah.grade}`)
+    }
+    return finalResults;
 
 }
 
-/* From here down, you are not expected to 
-   understand.... for now :)  
-   
-   Nothing to see here!
-   
-*/
+const scratchData = [
+    { id: 22, foo: 'bar' },
+    { id: 28, foo: 'bizz' },
+    { id: 19, foo: 'bazz' },
+];
 
-// tests
-=======
+function findById(items, idNum) {
+    // your code here
+    return items.find(function(ele) {
+        if (idNum === ele.id) {
+            return ele;
+        }
+    })
+}
 
-function makeStudentsReport(data){
-    const finalResults = [];
-      for(let i = 0; i < data.length; i++){
-        let blah = data[i]
-        finalResults.push(`${blah.name}: ${blah.grade}`)
-      }
-      return finalResults;
-  
-  }
-<<<<<<< HEAD
->>>>>>> dc90a24ef210544c1d85d6c711504b7805d5d7af
-=======
+//
 
-
-
-  const studentData = [
-    {
-      name: 'Tim',
-      status: 'Current student',
-      course: 'Biology',
-    },
-    {
-      name: 'Sue',
-      status: 'Withdrawn',
-      course: 'Mathematics',
-    },
-    {
-      name: 'Liz',
-      status: 'On leave',
-      course: 'Computer science',
-    },
-  ];
-  
-  function enrollInSummerSchool(students) {
-    let arr = [];
-    for (let i = 0; i < students.length; i++) {
-      let individual = students[i];
-      individual.status = 'In Summer school';
-      arr.push(individual);
+function testIt() {
+    const testData = [
+        { id: 1, foo: 'bar' },
+        { id: 2, foo: 'bizz' },
+        { id: 3, bang: 'boo' },
+    ];
+    const result = findById(testData, 3);
+    if (!(result && result !== null && typeof result === 'object')) {
+        console.error('`findById` must return an object');
+        return;
     }
-    return(arr);
-  }
->>>>>>> b1c5a79b27c609d619ff00e1638fece84d9e2291
+    if (result.id !== 3) {
+        console.error(
+            'Asked for item with id of `3` but got back one with id of ' + result.id
+        );
+        return;
+    }
+    if (result.bang !== 'boo') {
+        console.error(
+            'Expected all key/value pairs from target object to be returned'
+        );
+        return;
+    }
+    console.log('SUCCESS: `findByid` is working');
+}
+
+testIt();
