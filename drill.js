@@ -52,3 +52,33 @@ function makeStudentsReport(data){
       return finalResults;
   
   }
+
+
+
+  const studentData = [
+    {
+      name: 'Tim',
+      status: 'Current student',
+      course: 'Biology',
+    },
+    {
+      name: 'Sue',
+      status: 'Withdrawn',
+      course: 'Mathematics',
+    },
+    {
+      name: 'Liz',
+      status: 'On leave',
+      course: 'Computer science',
+    },
+  ];
+  
+  function enrollInSummerSchool(students) {
+    let arr = [];
+    for (let i = 0; i < students.length; i++) {
+      let individual = students[i];
+      individual.status = 'In Summer school';
+      arr.push(individual);
+    }
+    return(arr);
+  }
