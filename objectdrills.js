@@ -34,3 +34,13 @@ const newerObj = {
 
 let final = newerObj.meals
 console.log(final[3])
+
+
+
+const arr = [{ job: 'server', name: 'jack' }, { job: 'dishwasher', name: 'john' },
+    { job: 'cook', name: 'joe' }
+]
+
+arr.map(prop => {
+    console.log(prop.job + ": " + prop.name);
+})
