@@ -12,3 +12,17 @@ function createMyObject() {
 }
 
 console.log(createMyObject());
+
+
+const sampleObj = {
+    foo: 'foo',
+    bar: 'bar',
+    bizz: 'bizz',
+    bang: 'bang',
+  };
+  
+  function keyDeleter(obj) {
+    delete sampleObj.foo
+    delete sampleObj.bar
+    return sampleObj 
+  }
