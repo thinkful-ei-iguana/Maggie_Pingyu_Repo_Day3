@@ -14,6 +14,21 @@ function createMyObject() {
 console.log(createMyObject());
 
 
+const sampleObj = {
+    foo: 'foo',
+    bar: 'bar',
+    bizz: 'bizz',
+    bang: 'bang',
+  };
+  
+  function keyDeleter(obj) {
+    delete sampleObj.foo
+    delete sampleObj.bar
+    return sampleObj 
+  }
+
+
+
 function personMaker() {
     var person = {
         firstName: 'Paul',
@@ -27,6 +42,7 @@ function personMaker() {
     return person;
 }
 
+<<<<<<< HEAD
 function makeStudentsReport(data) {
     // your code here
 
@@ -40,3 +56,15 @@ function makeStudentsReport(data) {
 */
 
 // tests
+=======
+
+function makeStudentsReport(data){
+    const finalResults = [];
+      for(let i = 0; i < data.length; i++){
+        let blah = data[i]
+        finalResults.push(`${blah.name}: ${blah.grade}`)
+      }
+      return finalResults;
+  
+  }
+>>>>>>> dc90a24ef210544c1d85d6c711504b7805d5d7af
