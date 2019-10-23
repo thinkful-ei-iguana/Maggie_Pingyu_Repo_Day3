@@ -99,30 +99,29 @@ testIt();
 
 
 
-const studentData = [
-    {
-      name: 'Tim',
-      status: 'Current student',
-      course: 'Biology',
+const studentData = [{
+        name: 'Tim',
+        status: 'Current student',
+        course: 'Biology',
     },
     {
-      name: 'Sue',
-      status: 'Withdrawn',
-      course: 'Mathematics',
+        name: 'Sue',
+        status: 'Withdrawn',
+        course: 'Mathematics',
     },
     {
-      name: 'Liz',
-      status: 'On leave',
-      course: 'Computer science',
+        name: 'Liz',
+        status: 'On leave',
+        course: 'Computer science',
     },
-  ];
-  
-  function enrollInSummerSchool(students) {
+];
+
+function enrollInSummerSchool(students) {
     let arr = [];
     for (let i = 0; i < students.length; i++) {
-      let individual = students[i];
-      individual.status = 'In Summer school';
-      arr.push(individual);
+        let individual = students[i];
+        individual.status = 'In Summer school';
+        arr.push(individual);
     }
-    return(arr);
-  }
+    return (arr);
+}
