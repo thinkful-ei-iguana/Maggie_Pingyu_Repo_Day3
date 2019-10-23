@@ -41,3 +41,14 @@ function personMaker() {
     };
     return person;
 }
+
+
+function makeStudentsReport(data){
+    const finalResults = [];
+      for(let i = 0; i < data.length; i++){
+        let blah = data[i]
+        finalResults.push(`${blah.name}: ${blah.grade}`)
+      }
+      return finalResults;
+  
+  }
