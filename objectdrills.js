@@ -41,6 +41,22 @@ const arr = [{ job: 'server', name: 'jack' }, { job: 'dishwasher', name: 'john' 
     { job: 'cook', name: 'joe' }
 ]
 
-arr.map(obj => {
-    console.log(obj.job + ": " + obj.name);
+arr.map(prop => {
+    console.log(prop.job + ": " + prop.name);
 })
+
+
+
+const arr = [{ job: 'server', name: 'jack' }, { job: 'dishwasher', name: 'john', boss: 'pingyu' },
+    { job: 'cook', name: 'joe', boss: 'maggie' }
+]
+
+arr.map(prop => {
+
+    if (prop.hasOwnProperty('boss')) {
+        console.log(`${prop.job} ${prop.name} reports to ${prop.boss}.`);
+    } else {
+        console.log(`${prop.job} ${prop.name} doesn't report to anybody.`);
+    }
+})
+console.log(arr.map);

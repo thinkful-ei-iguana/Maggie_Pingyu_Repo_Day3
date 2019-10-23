@@ -1,6 +1,6 @@
 'use strict';
 
-
+/*
 const loaf = {
     flour: 300,
     water: 210,
@@ -47,11 +47,11 @@ arr.map(prop => {
 
 
 
-const arr = [{ job: 'server', name: 'jack' }, { job: 'dishwasher', name: 'john', boss: 'pingyu' },
+const array = [{ job: 'server', name: 'jack' }, { job: 'dishwasher', name: 'john', boss: 'pingyu' },
     { job: 'cook', name: 'joe', boss: 'maggie' }
 ]
 
-arr.map(prop => {
+array.map(prop => {
 
     if (prop.hasOwnProperty('boss')) {
         console.log(`${prop.job} ${prop.name} reports to ${prop.boss}.`);
@@ -60,3 +60,34 @@ arr.map(prop => {
     }
 })
 console.log(arr.map);
+*/
+
+const codeObject = {
+    a: 2,
+    b: 3,
+    c: 4,
+    d: 5
+};
+
+let result = '';
+
+const msg = 'craft block argon meter bells brown croon droop';
+let ary = msg.split(' ');
+console.log(ary);
+
+for (let i = 0; i < ary.length; i++) {
+    let word = ary[i];
+    let letter = word[0];
+    console.log(letter);
+    let index = codeObject[letter];
+    console.log(index);
+    let ltr = word[index - 1];
+    console.log(ltr);
+    if (codeObject.hasOwnProperty(letter)) {
+        result += ltr;
+    } else {
+        result += ' ';
+    }
+}
+
+console.log(result);
