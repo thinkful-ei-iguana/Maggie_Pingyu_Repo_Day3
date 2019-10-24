@@ -59,4 +59,4 @@ arr.map(prop => {
         console.log(`${prop.job} ${prop.name} doesn't report to anybody.`);
     }
 })
-console.log(arr.map);
+console.log(arr.map); 
